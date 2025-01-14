@@ -1,0 +1,29 @@
+#+TITLE: Teknologiprojekt -- Fremtidens levevis
+#+AUTHOR: Alexander Knudsen, Andreas Jensen og Jeppe Bøgeskov
+#+SETUPFILE: ./setupfile.org
+#+OPTIONS: title:nil
+#+OPTIONS: toc:nil
+
+#+LANGUAGE: dk
+
+#+INCLUDE: ./forside.org
+
+#+begin_export latex
+\restoregeometry
+\tableofcontents
+\newpage
+#+end_export
+
+#+INCLUDE: ./resume.org
+#+INCLUDE: ./forord.org
+#+INCLUDE: ./indledning.org
+#+INCLUDE: ./problemanalyse.org
+#+INCLUDE: ./produktprincip.org
+#+INCLUDE: ./produktudformning.org
+#+INCLUDE: ./produktionsforberedelse.org
+#+INCLUDE: ./realisering.org
+#+INCLUDE: ./evaluering.org
+#+INCLUDE: ./miljøvurdering.org
+#+INCLUDE: ./konklusion.org
+#+INCLUDE: ./kildeliste.org
+#+INCLUDE: ./bilag.org

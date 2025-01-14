@@ -1,0 +1,5 @@
+#+LATEX_CLASS: article
+#+LATEX_OPTIONS: 12pt
+#+LATEX_OPTIONS: a4paper
+#+LATEX_HEADER: \usepackage[danish]{babel}
+#+LATEX_HEADER: \usepackage[margin=2.5cm]{geometry}
