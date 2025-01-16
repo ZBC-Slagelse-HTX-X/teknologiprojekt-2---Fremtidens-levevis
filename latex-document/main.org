@@ -3,7 +3,7 @@
 #+SETUPFILE: ./setupfile.org
 #+OPTIONS: title:nil
 #+OPTIONS: toc:nil
-
+#+BIBLIOGRAPHY: bibliography.bib
 #+LANGUAGE: dk
 
 #+INCLUDE: ./forside.org
@@ -25,5 +25,6 @@
 #+INCLUDE: ./evaluering.org
 #+INCLUDE: ./miljøvurdering.org
 #+INCLUDE: ./konklusion.org
-#+INCLUDE: ./kildeliste.org
+
+#+print_bibliography:
 #+INCLUDE: ./bilag.org
