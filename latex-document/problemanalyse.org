@@ -1,4 +1,9 @@
 * Problemanalyse
+
+# Den samfundsmæssige problemstilling som heri projektet arbejdes med, er det faktum, at Smart Hjemsløsninger i udstrakt grad suppleres af firmaer med oprindelse i Kina (TODO indsæt kilde). Dette er problematisk, da løsningerne kræver meget data for at fungere, og da de ligge i Kina, kan det kinesisk kommunistiske parti kræve, at disse data indhentes (TODO indsæt kilde).
+
+# Udover at det kan være et problem for den individuelle bruger, at vedkommendes data indsamles og anvendes til formål, vedkommenede ikke bryder sig om, så er det også et nationalt sikkerhedsproblem, da disse data kan anvendes til at danne forbrugsmønstre over gruppen af mennesker, hvis data indsamles.
+
 ** Interessentanalyse
 *** Ekstern interessenter
 + NGO'er
