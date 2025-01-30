@@ -1,2 +1,21 @@
 * Indledning
 ** Projektstyring
+*** Oplæg
+Heri projektet arbejdes der med casen, der omhandler 'bolig'.
+*** Tidsstyring
++ Startdato: 9. december 2024
++ Slutdato: 7. marts 2025
+**** Gantt-diagram
+#+NAME:
+** Problemidentifikation
+Indenfor temaet er der en række forskellige emner, som kunne være relevante at arbejde med. I kapitlet herunder, ([[Idegenerering]]), er nogle af disse, som er fremfundne via idegenereringsteknikken, brainstormmetoden.
+*** Idegenerering
++ Smarthjemsløsning
++
+*** Samfundsmæssige problemstilling
+Den samfundsmæssige problemstilling som heri projektet arbejdes med, er det faktum, at Smart Hjemsløsninger i udstrakt grad suppleres af firmaer med oprindelse i Kina (TODO indsæt kilde). Dette er problematisk, da løsningerne kræver meget data for at fungere, og da de ligge i Kina, kan det kinesisk kommunistiske parti kræve, at disse data indhentes (TODO indsæt kilde).
+
+Udover at det kan være et problem for den individuelle bruger, at vedkommendes data indsamles og anvendes til formål, vedkommenede ikke bryder sig om, så er det også et nationalt sikkerhedsproblem, da disse data kan anvendes til at danne forbrugsmønstre over gruppen af mennesker, hvis data indsamles.
+** Afgrænsning
+Da en total smarthjemsløsning er meget omfattende, vælges der herfor at fokusere på enkelte dele af en sådan løsning. I dette tilfælde er det endelige produkt et proof-of-concept, hvori en smarthub kan sende signaler og modtage signaler til andre enheder på et lokalt netværk. Desuden skal denne kunne fjernbetjenes igennem en styringsapplikation.
+** Problemformulering

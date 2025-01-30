@@ -3,3 +3,5 @@
 #+LATEX_OPTIONS: a4paper
 #+LATEX_HEADER: \usepackage[danish]{babel}
 #+LATEX_HEADER: \usepackage[margin=2.5cm]{geometry}
+#+LATEX_HEADER: \usepackage{lmodern}
+#+LATEX_HEADER_EXTRA: \hypersetup{colorlinks, linkcolor=blue, urlcolor=blue}

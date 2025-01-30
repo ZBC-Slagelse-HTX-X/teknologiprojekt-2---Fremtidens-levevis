@@ -1,1 +1,3 @@
-* Miljøvurdering
+* TODO Miljøvurdering
+** Hardwarepåvirkning
+** Softwarepåvirkning (serverpåvirkning)

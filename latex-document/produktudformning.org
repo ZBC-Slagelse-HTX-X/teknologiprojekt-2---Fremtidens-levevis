@@ -1,1 +1,3 @@
 * Produktudformning
+** Software
+** Hardware

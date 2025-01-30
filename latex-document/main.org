@@ -6,7 +6,9 @@
 #+BIBLIOGRAPHY: bibliography.bib
 #+LANGUAGE: dk
 
-#+INCLUDE: ./forside.org
+#+begin_export latex
+\input{./forside.tex}
+#+end_export
 
 #+begin_export latex
 \restoregeometry
@@ -14,7 +16,7 @@
 \newpage
 #+end_export
 
-#+INCLUDE: ./resume.org
+#+INCLUDE: ./abstract.org
 #+INCLUDE: ./forord.org
 #+INCLUDE: ./indledning.org
 #+INCLUDE: ./problemanalyse.org
@@ -26,5 +28,5 @@
 #+INCLUDE: ./miljøvurdering.org
 #+INCLUDE: ./konklusion.org
 
-#+print_bibliography:
+#+PRINT_BIBLIOGRAPHY:
 #+INCLUDE: ./bilag.org

@@ -1,1 +1,22 @@
 * Problemanalyse
+** Interessentanalyse
+*** Ekstern interessenter
++ NGO'er
+*** Gidsel
++ Konsumenter
+*** Grå eminence
++ Konkurrenter
+*** Ressourceperson
++ Staten
+** HV-modellen
+*** Hvad
+1. Et konkurrencealternativ
+*** Hvorfor
+1. For at få markedsandel på vestlige hænder
+*** Hvem
+1. Et privat firma.
+2. Kinesiske firmaer påvirkes, her negativt.
+*** Hvor
+1. Resten af vestlige lande.
+*** Hvordan
+1. Decentralt IoT-system
