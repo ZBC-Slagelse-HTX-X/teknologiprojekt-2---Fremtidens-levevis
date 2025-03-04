@@ -12,55 +12,41 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage[danish, ]{babel}
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{lmodern}
-\hypersetup{colorlinks, linkcolor=blue, urlcolor=blue}
-\author{Alexander Knudsen, Andreas Jensen og Jeppe Bøgeskov}
 \date{\today}
-\title{Teknologiprojekt -- Fremtidens levevis}
+\title{}
 \hypersetup{
- pdfauthor={Alexander Knudsen, Andreas Jensen og Jeppe Bøgeskov},
- pdftitle={Teknologiprojekt -- Fremtidens levevis},
+ pdfauthor={},
+ pdftitle={},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
- pdflang={Dk}}
+ pdflang={English}}
 \begin{document}
 
-\input{./forside.tex}
-
-\restoregeometry
 \tableofcontents
-\newpage
-\section{Abstract}
-\label{sec:org6419ad8}
-In this report, is the work process and descisions leading to creating a smart home system that prioritises data security and self-custody.
-\section{Forord}
-\label{sec:org4e437e0}
-I forbindelse med projektet og produktudvikling vil vi gerne rette en tak til vores faglærer, Henrik Poulsen.
+
 \section{Indledning}
-\label{sec:org6d9531c}
+\label{sec:org1a88e63}
 \subsection{Projektstyring}
-\label{sec:org5e3ff51}
+\label{sec:org10e56b3}
 \subsubsection{Oplæg}
-\label{sec:orgbec7f1d}
+\label{sec:orgada9878}
 Heri projektet arbejdes der med casen, der omhandler 'bolig'.
 \subsubsection{Tidsstyring}
-\label{sec:org730faaa}
+\label{sec:org4c3a4d6}
 \begin{itemize}
 \item Startdato: 9. december 2024
 \item Slutdato: 7. marts 2025
 \end{itemize}
 \begin{enumerate}
 \item Gantt-diagram
-\label{sec:orgb1d2daa}
+\label{sec:org0d6086f}
 \end{enumerate}
 \subsection{Problemidentifikation}
-\label{sec:orgfafb1b0}
+\label{sec:orge750b50}
 Indenfor temaet er der en række forskellige emner, som kunne være relevante at arbejde med, herunder high-tech-løsninger. Grundet gruppens kompetencer, er denne valgt, hvorfor problemidentifikation er afgrænset hertil.
 \subsubsection{Samfundsmæssige problemstilling}
-\label{sec:orga952bf5}
+\label{sec:org0626d2e}
 I indledningen af problemidentifikationen fremgik det hurtigt, at nogle af de største smart home løsninger kommer fra udenlandske firmaer, herunder Google, Apple, Amazon, men også firmaer der er blevet kritiseret meget, såsom TP-Link. (indsæt tplink-kilde)
 
 Desuden beskrives i sikkerhedsblad også, hvordan samtlige IoT-enheder har været anvendt af kinesiske, statssponsorede, hackere til i botnet (indsæt forklaring omkring botnet) til at angribe kritiske sektorer i det amerikanske samfund, såsom militær-, udannelseinstitutioner og telekommunikationsløsninger. (indsæt securityweek-kilde)
@@ -69,9 +55,9 @@ Ifl. Forsvarets Efterretningstjeneste, vurderer Center for Cybersikkerhed, at Ru
 
 Grundet, at det Kommunistiske Kinesiske Parti har regeringsmagten i Kina, medfører dette totalitær lovgivning, der nemlig gør, at partiet kan indkræve samtlige data fra firmaer, der oppererer til lands (indsæt kilde). Potentialet i dette alene, er nok til at refærdiggøre udvikling af et alternativt produkt, såsom det, der heri rapporten beskrives.
 
-Således er der få alternativer til status quo, som der herfra kan viderudvikles på. Se afsnit om idegenerering (\ref{sec:org12d3e0c}).
+Således er der få alternativer til status quo, som der herfra kan viderudvikles på. Se afsnit om idegenerering (\ref{sec:org3ff37e5}).
 \subsection{Idegenerering}
-\label{sec:org12d3e0c}
+\label{sec:org3ff37e5}
 Alternativerne til status quo-IoT-løsningerne er følgende:
 \begin{itemize}
 \item Afdigitalisering af nuværende løsninger
@@ -79,96 +65,13 @@ Alternativerne til status quo-IoT-løsningerne er følgende:
 \item Udvikling af centraliseret løsninger, udgivet af et troværdigt firma i et land, der ikke kræver udleveringen af data fra sine brugere
 \end{itemize}
 \subsection{Idesortering (lyskurvemetoden)}
-\label{sec:orgb65406b}
+\label{sec:org605086d}
 Den første løsning indebærer, at man bevæger sig væk fra vores oprindelige afgrænsning af fokusområde, nemlig det digitale, hvilket i øvrigt findes i forvejen, hvorfor markedet for dette vurderes mættet.
 
 Desuden grundet gruppens IT-kompetencer, virker de to resterende løsninger som mere kompatible med gruppen. Imellem disse to ideer, vurderes det, at den mere spændende løsning er at lave det decentraliseret med en såkaldt FOSS-løsning, se kapitlet herom (indsæt kapitellink)
 \subsection{Afgrænsning}
-\label{sec:orgc46d8ef}
+\label{sec:org3ad0a47}
 Da en total smarthjemsløsning er meget omfattende, vælges der herfor at fokusere på enkelte dele af en sådan løsning. I dette tilfælde er det endelige produkt et proof-of-concept, hvori en smarthub kan sende signaler og modtage signaler til andre eheder på et lokalt netværk. Desuden skal denne kunne fjernbetjenes igennem en styringsapplikation.
 \subsection{Problemformulering}
-\label{sec:orgef4d52f}
-\section{Problemanalyse}
-\label{sec:org3679584}
-
-I problemanalysen er problemstillingen blevet yderligere konkretiseret bl.a. ved et problemtræ (indsæt link til problemtræ)
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.9\linewidth]{assets/Problemtræ.png}
-\caption{Viser projektets problemtræ}
-\end{figure}
-\subsection{Interessentanalyse}
-\label{sec:org976cef3}
-\subsubsection{Ekstern interessenter}
-\label{sec:orgf2dab0a}
-\begin{itemize}
-\item NGO'er
-\end{itemize}
-\subsubsection{Gidsel}
-\label{sec:org34c7521}
-\begin{itemize}
-\item Konsumenter
-\end{itemize}
-\subsubsection{Grå eminence}
-\label{sec:orgaa235ac}
-\begin{itemize}
-\item Konkurrenter
-\end{itemize}
-\subsubsection{Ressourceperson}
-\label{sec:org63a3f15}
-\begin{itemize}
-\item Staten
-\end{itemize}
-\subsection{HV-modellen}
-\label{sec:org6b97fc3}
-\subsubsection{Hvad}
-\label{sec:orgbaa59e1}
-\begin{enumerate}
-\item Et konkurrencealternativ
-\end{enumerate}
-\subsubsection{Hvorfor}
-\label{sec:orgda4cb7c}
-\begin{enumerate}
-\item For at få markedsandel på vestlige hænder
-\end{enumerate}
-\subsubsection{Hvem}
-\label{sec:org4e76554}
-\begin{enumerate}
-\item Et privat firma.
-\item Kinesiske firmaer påvirkes, her negativt.
-\end{enumerate}
-\subsubsection{Hvor}
-\label{sec:org442bab2}
-\begin{enumerate}
-\item Resten af vestlige lande.
-\end{enumerate}
-\subsubsection{Hvordan}
-\label{sec:org66417d5}
-\begin{enumerate}
-\item Decentralt IoT-system
-\end{enumerate}
-\section{Produktprincip}
-\label{sec:orga77d6f9}
-\section{Produktudformning}
-\label{sec:org563ee9e}
-\subsection{Software}
-\label{sec:org6da2577}
-\subsection{Hardware}
-\label{sec:orgdbd4fd8}
-\section{Produktionsforberedelse}
-\label{sec:orge880538}
-\subsection{Masseproduktion}
-\label{sec:orge66eada}
-\section{{\bfseries\sffamily TODO} Realisering}
-\label{sec:orgd4c9e64}
-\section{{\bfseries\sffamily TODO} Evaluering}
-\label{sec:org4ddb451}
-\section{{\bfseries\sffamily TODO} Miljøvurdering}
-\label{sec:org9bb106c}
-\subsection{Hardwarepåvirkning}
-\label{sec:org9e89a3f}
-\subsection{Softwarepåvirkning (serverpåvirkning)}
-\label{sec:org15c2cb6}
-\section{Konklusion}
-\label{sec:org7454aed}
+\label{sec:org24f278a}
 \end{document}

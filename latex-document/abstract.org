@@ -1,1 +1,2 @@
 * Abstract
+In this report, is the work process and descisions leading to creating a smart home system that prioritises data security and self-custody.

@@ -8,14 +8,28 @@ Heri projektet arbejdes der med casen, der omhandler 'bolig'.
 **** Gantt-diagram
 #+NAME:
 ** Problemidentifikation
-Indenfor temaet er der en række forskellige emner, som kunne være relevante at arbejde med. I kapitlet herunder, ([[Idegenerering]]), er nogle af disse, som er fremfundne via idegenereringsteknikken, brainstormmetoden.
-*** Idegenerering
-+ Smarthjemsløsning
-+
+Indenfor temaet er der en række forskellige emner, som kunne være relevante at arbejde med, herunder high-tech-løsninger. Grundet gruppens kompetencer, er denne valgt, hvorfor problemidentifikation er afgrænset hertil.
 *** Samfundsmæssige problemstilling
-Den samfundsmæssige problemstilling som heri projektet arbejdes med, er det faktum, at Smart Hjemsløsninger i udstrakt grad suppleres af firmaer med oprindelse i Kina (TODO indsæt kilde). Dette er problematisk, da løsningerne kræver meget data for at fungere, og da de ligge i Kina, kan det kinesisk kommunistiske parti kræve, at disse data indhentes (TODO indsæt kilde).
+I indledningen af problemidentifikationen fremgik det hurtigt, at nogle af de største smart home løsninger kommer fra udenlandske firmaer, herunder Google, Apple, Amazon, men også firmaer der er blevet kritiseret meget, såsom TP-Link. (indsæt tplink-kilde)
 
-Udover at det kan være et problem for den individuelle bruger, at vedkommendes data indsamles og anvendes til formål, vedkommenede ikke bryder sig om, så er det også et nationalt sikkerhedsproblem, da disse data kan anvendes til at danne forbrugsmønstre over gruppen af mennesker, hvis data indsamles.
+Desuden beskrives i sikkerhedsblad også, hvordan samtlige IoT-enheder har været anvendt af kinesiske, statssponsorede, hackere til i botnet (indsæt forklaring omkring botnet) til at angribe kritiske sektorer i det amerikanske samfund, såsom militær-, udannelseinstitutioner og telekommunikationsløsninger. (indsæt securityweek-kilde)
+
+Ifl. Forsvarets Efterretningstjeneste, vurderer Center for Cybersikkerhed, at Ruslands øgede risikovillighed i forhold til at bruge hybride virkemidler mod NATO-lande, herunder Danmark, også omfatter destruktive cyberangreb. (indsæt https://www.fe-ddis.dk/da/arbejdsomrade-a/den-hybride-trussel/ kilde) Indtil videre er der ikke anmeldt angreb via IoT ting, men det kan ikke udelukkes, at Rusland, som er allieret med Kina, potentielset ville kunne udnytte Kinesiske firmaers adgang til data iagt af deres markedsandel indenfor IoT-things.
+
+Grundet, at det Kommunistiske Kinesiske Parti har regeringsmagten i Kina, medfører dette totalitær lovgivning, der nemlig gør, at partiet kan indkræve samtlige data fra firmaer, der oppererer til lands (indsæt kilde). Potentialet i dette alene, er nok til at refærdiggøre udvikling af et alternativt produkt, såsom det, der heri rapporten beskrives.
+
+Således er der få alternativer til status quo, som der herfra kan viderudvikles på. Se afsnit om idegenerering ([[Idegenerering]]).
+** Idegenerering
+Alternativerne til status quo-IoT-løsningerne er følgende:
++ Afdigitalisering af nuværende løsninger
++ Udvikling af decentraliserede løsninger, der involverer self-custody (indsæt fodnote)
++ Udvikling af centraliseret løsninger, udgivet af et troværdigt firma i et land, der ikke kræver udleveringen af data fra sine brugere
+** Idesortering (lyskurvemetoden)
+Den første løsning indebærer, at man bevæger sig væk fra vores oprindelige afgrænsning af fokusområde, nemlig det digitale, hvilket i øvrigt findes i forvejen, hvorfor markedet for dette vurderes mættet.
+
+Desuden grundet gruppens IT-kompetencer, virker de to resterende løsninger som mere kompatible med gruppen. Imellem disse to ideer, vurderes det, at den mere spændende løsning er at lave det decentraliseret med en såkaldt FOSS-løsning, se kapitlet herom (indsæt kapitellink)
+
 ** Afgrænsning
-Da en total smarthjemsløsning er meget omfattende, vælges der herfor at fokusere på enkelte dele af en sådan løsning. I dette tilfælde er det endelige produkt et proof-of-concept, hvori en smarthub kan sende signaler og modtage signaler til andre enheder på et lokalt netværk. Desuden skal denne kunne fjernbetjenes igennem en styringsapplikation.
+Da en total smarthjemsløsning er meget omfattende, vælges der herfor at fokusere på enkelte dele af en sådan løsning. I dette tilfælde er det endelige produkt et proof-of-concept, hvori en smarthub kan sende signaler og modtage signaler til andre eheder på et lokalt netværk. Desuden skal denne kunne fjernbetjenes igennem en styringsapplikation.
+
 ** Problemformulering
