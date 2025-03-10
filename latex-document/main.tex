@@ -65,13 +65,13 @@ Heri projektet arbejdes der med casen, der omhandler 'bolig'.
 Indenfor temaet er der en række forskellige emner, som kunne være relevante at arbejde med, herunder high-tech-løsninger. Grundet gruppens kompetencer, er denne valgt, hvorfor problemidentifikation er afgrænset hertil.
 \subsubsection{Samfundsmæssige problemstilling}
 \label{sec:orga952bf5}
-I indledningen af problemidentifikationen fremgik det hurtigt, at nogle af de største smart home løsninger kommer fra udenlandske firmaer, herunder Google, Apple, Amazon, men også firmaer der er blevet kritiseret meget, såsom TP-Link. (indsæt tplink-kilde)
+I indledningen af problemidentifikationen fremgik det hurtigt, at nogle af de største smart home løsninger kommer fra udenlandske firmaer, herunder Google, Apple, Amazon, men også firmaer der er blevet kritiseret meget, såsom TP-Link. \footfullcite{tplink}
 
-Desuden beskrives i sikkerhedsblad også, hvordan samtlige IoT-enheder har været anvendt af kinesiske, statssponsorede, hackere til i botnet (indsæt forklaring omkring botnet) til at angribe kritiske sektorer i det amerikanske samfund, såsom militær-, udannelseinstitutioner og telekommunikationsløsninger. (indsæt securityweek-kilde)
+Desuden beskrives i sikkerhedsdatablade også, hvordan samtlige IoT-enheder har været anvendt af kinesiske, statssponsorede, hackere, ved at indgå i botnet,\footnote{Et botnet er et netværk af bots (inficerede computermaskiner), som anvendes til synkronangreb mod andre maskiner fx i DDOS-angreb (Distributed Denial of Service).} til at angribe kritiske sektorer i det amerikanske samfund, såsom militær-, udannelseinstitutioner og telekommunikationsløsninger. \footfullcite{securityweek2024chinesespies}
 
-Ifl. Forsvarets Efterretningstjeneste, vurderer Center for Cybersikkerhed, at Ruslands øgede risikovillighed i forhold til at bruge hybride virkemidler mod NATO-lande, herunder Danmark, også omfatter destruktive cyberangreb. (indsæt \url{https://www.fe-ddis.dk/da/arbejdsomrade-a/den-hybride-trussel/} kilde) Indtil videre er der ikke anmeldt angreb via IoT ting, men det kan ikke udelukkes, at Rusland, som er allieret med Kina, potentielset ville kunne udnytte Kinesiske firmaers adgang til data iagt af deres markedsandel indenfor IoT-things.
+Ifl. Forsvarets Efterretningstjeneste, vurderer Center for Cybersikkerhed, at Ruslands øgede risikovillighed med hensyn til brug af hybride virkemidler mod NATO-lande, herunder Danmark, også omfatter destruktive cyberangreb.\footfullcite{fe-ddis} Indtil videre er der ikke anmeldt angreb via IoT, men det kan ikke udelukkes, at Rusland, som er allieret med Kina, potentielset ville kunne udnytte Kinesiske firmaers adgang til data iagt af deres markedsandel indenfor IoT.
 
-Grundet, at det Kommunistiske Kinesiske Parti har regeringsmagten i Kina, medfører dette totalitær lovgivning, der nemlig gør, at partiet kan indkræve samtlige data fra firmaer, der oppererer til lands (indsæt kilde). Potentialet i dette alene, er nok til at refærdiggøre udvikling af et alternativt produkt, såsom det, der heri rapporten beskrives.
+Grundet, at det Kommunistiske Kinesiske Parti har regeringsmagten i Kina, medfører dette totalitær lovgivning, der muliggør, at partiet kan indkræve samtlige data fra firmaer, der oppererer til lands \footfullcite{securityweek2024chinesespies}. Potentialet i dette alene, er nok til at refærdiggøre udvikling af et alternativt produkt, såsom det, der heri rapporten beskrives.
 
 Således er der få alternativer til status quo, som der herfra kan viderudvikles på. Se afsnit om idegenerering (\ref{sec:org12d3e0c}).
 \subsection{Idegenerering}
@@ -152,13 +152,48 @@ I problemanalysen er problemstillingen blevet yderligere konkretiseret bl.a. ved
 \item Decentralt IoT-system
 \end{enumerate}
 
+\newpage
 \section{Produktprincip}
 \label{sec:orga77d6f9}
-
 \subsection{Målgruppe}
-Hr. og fru. Danmark
+Et værktøj til at beskrive sin målgruppe inden for teknologifaget, er at lave en persona. Dette gøres for at det kan vises et fiktivt eksempel på en person som kunne have interesse for at købe produktet.
+
+\textbf{Køn}: Mand
+
+\textbf{Alder}: 34
+
+\textbf{Beskæftigelse}: Revisor
+
+\textbf{Status}: Gift
+
+\textbf{Bopæl}: Herlev
+
+\textbf{Interesser}: 
+\begin{itemize}
+\item Fisker
+\item Finans
+\item Teknologi
+\end{itemize}
+
+\textbf{Teknologisyn}: 
+\begin{itemize}
+\item Smarte hjem
+\item Android-bruger
+\end{itemize}
+
+Dette vil sige at personen er interesseret i at have et smart hjem, og ikke har alverdens tid til at lave en lignende løsning selv.
 
 \subsection{Kravspecifikation}
+\label{sec:kravspecifikation}
+Her opsættes kravspecifikationen for smarthjem-systemet (specifikt smart-gardin-systemet \ref{sec:orgc46d8ef}).
+\begin{itemize}
+\item Gardinet skal kunne kontrolleres fra en smartphone
+\item Styreingen skal ske trådløst
+\item Styringen skal være nemt at benytte (Som en fjernstyring)
+\item Produktet skal have en rimelig pris
+\item Enheden skal fungere via intranet (dvs. produktet skal virke i et lokalt netværk)
+\item FOSS \ref{sec:loesningsforslag}
+\end{itemize}
 
 
 \subsection{Konkurrentanalyse}
@@ -182,12 +217,25 @@ Xiaomi er et kinesisk firma, der leverer en lang række smart-hjemme-produkter m
 \end{figure}
 
 \subsubsection{Huawei}
-Huawei er også en kinesisk virksomhed, som udbyder en række smart-produkter. Den amerikanske start har valgt at banlyse salg og import af nye huawei-produkter. Dette gjorde man fordi man frygtede at der var en risiko for såkaldte "bagdøre" (backdoors) i virksomhedens produkter.\footfullcite{huawei}
+Huawei er også en kinesisk virksomhed, som blandt andet udbyder en række smart-produkter. Det må siges at virksemheden her passer lige ind i den overordnede samfundsmessige problemstilling \ref{sec:orga952bf5}, hvor it-sikkerheden omtales da den amerikanske start har valgt at banlyse salg og import af nye huawei-produkter. Dette gjorde staten fordi at de frygtede der var en risiko for såkaldte "bagdøre" (backdoors) i virksomhedens produkter.\footfullcite{huawei}
+\begin{figure}[htbp]
+\centering
+\fbox{\includegraphics[width=.75\linewidth]{assets/huawei.jpg}}
+\caption{Viser en illustration af Huawei smart-home}
+\end{figure}
+
+\subsection{Løsningsforslag}
+\label{sec:loesningsforslag}
+\subsubsection{Software}
+Softwaren skal udvikles efter FOSS-princippet, hvilket betyder at softwaren skal være frit tilgængelig for alle, kan viderudvikles og distribueres frit. Dette er med til at understøtte princippet om decentralisering og gennemsigtighed, som virksomheden bygger på. Det skaber også en større sikkerhed for brugeren, da tech-nørder kan gennemse kildekoden og tilføje forbedringer til softwaren samt råbe vagt i gevær såfremt der er tale om en sikkerhedsrisiko. Desuden vil en softwareudvikler også være tilknyttet projektet, fuld- eller deltids, afhængigt af arbejdsbyrden. Koden skal synkroniseres med GitHub. Git skal anvendes til udviklig- og versionshåndtering.
+
+
 \newpage
 
 \section{Produktudformning}
 \label{sec:org563ee9e}
-Under idegeneringen blev der talt om at dedigitalisere de smart-hjem produkter som der findes på markedet, derfor har vi tænkt os at designe og udvikle et smart-hjem rulle gardin som du kan kontrollere fra din smartphone, dette fjerner risikoen med at din data bliver lagret og solgt til virksomheder omkring i verden.
+I Idegenereringsfasen blev dedigitaliseringen af smart-hjem-produkter som der finde på markedet omtalt, derfor har vil er det beslutet at der skal udvikles et smart-rullegardin som følger kravene i kravspecifikationen\ref{sec:kravspecifikation} og som derved sikre brugerens data og privatliv fra fjentligtsindede magter omkring i verden.
+% Under idegeneringen blev der talt om at dedigitalisere de smart-hjem-produkter som der findes på markedet, derfor har vi tænkt os at designe og udvikle et smart-hjem-rullegardin som brugeren kan kontrollere fra sin smartphone, dette fjerner risikoen med at brugerens data bliver lagret og solgt til virksomheder omkring i verden.
 
 \subsection{Hardware}
 \label{sec:orgdbd4fd8}
@@ -195,14 +243,14 @@ Under idegeneringen blev der talt om at dedigitalisere de smart-hjem produkter s
 Vi besluttede os for at det mest praktiske og realistiske materiale til at producere vores prototype i ville være plastik, altså en 3D-printet kasse hvor vi kan have vores elektroniske komponenter. Her besluttede vi os for at printe med PLA-Plastik da dette er et billigt og forholdsvist holdbart materiale. En anden grund til at vi besluttede os for at benytte en 3D-printet kasse er at det er hurtigt at iterere og forbedre dit design, og det er et ikke særligt dyrt materiale, hvilket gør det økonomisk bevidst at benytte dette til prototypen.
 \begin{figure}[htbp]
     \centering
-    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \fbox{\includegraphics[width=.75\linewidth]{assets/Kasse.png}}
     \caption{Viser en Fusion360 3D-tegning af Kassen}
     \end{figure}
 Kassen er simpel da fokuset ikke var at skabe noget der var pænt til at starte med, den er derimod meget funktionel da den gør det muligt at komme til alle individuelle komponenter. Der er også et hul i siden af kassen som er tilpasset til en 12v DC motor, dette gør så at motoren kan sidde fast monteret i kassen. De fire huller i toppen af kassen er lavet så et låg kan monteres for at skjule og beskytte elektronikken i kassen.
 
 \begin{figure}[htbp]
     \centering
-    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \fbox{\includegraphics[width=.75\linewidth]{assets/Lag.png}}
     \caption{Viser en Fusion360 3D-tegning af Låget}
     \end{figure}
 
@@ -210,7 +258,7 @@ Den sidste ting som vi har 3D-printet i forbindelse med vores produkt er et mont
 
 \begin{figure}[htbp]
     \centering
-    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \fbox{\includegraphics[width=.4\linewidth]{assets/Montage-Stykke.png}}
     \caption{Viser en Fusion360 3D-tegning af Montage-Stykket}
     \end{figure}
 
@@ -218,7 +266,7 @@ Den kasse som vi endte ud med opfylder alle de krav som vi stilte, den er nem og
 
 \begin{figure}[htbp]
     \centering
-    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \fbox{\includegraphics[height=.55\linewidth]{assets/Kasse-frdig.png}}
     \caption{Her ses den endelige udgave af produktet. }
     \end{figure}
 
@@ -227,7 +275,7 @@ I elektronik delen var der nogle også krav der skulle opfyldes, elektronikken s
 
 \begin{figure}[htbp]
     \centering
-    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \fbox{\includegraphics[width=.75\linewidth]{assets/EL-diagram.png}}
     \caption{Her ses EL-digrammet, tegnet i EasyEDA. }
     \end{figure}
 
@@ -251,6 +299,21 @@ Det er essentielt for vores produkt af vores microcontrollers kan fungere over W
 \label{sec:org9e89a3f}
 \subsection{Softwarepåvirkning (serverpåvirkning)}
 \label{sec:org15c2cb6}
+
+\newpage
+\section{Miljøvurdering}
+\label{sec:miljoevurdering}
+\subsection{Forurening i produktionsøjemed}
+Den primære udledning af CO2, som direkte konsekvens af produktet heri beskrevet, vil kunne ses i produktionsøjemed.
+\subsection{Forurening i privaten dvs. under anvendelse}
+Ligedan vil der udledes CO2 ifbm. energiskabelse til disse enheder. Det forventes dog i første omgang, at markedsandelen vil være lille, at produkterne vil kunne produceres on-demand og at det iøvrigt er et alternativ til andre smarthjemløsninger, som folk ellers havde købt.
+\subsection{Forurening ifbm. med fragt}
+Logistik ifbm. tidlig on-demand produktion kan medregnes i distribuantens CO2-regnskab, men skal sidenhen revideres i opskalering af produktion. 
+
+\newpage
 \section{Konklusion}
 \label{sec:org7454aed}
+
+\newpage
+\printbibliography
 \end{document}
