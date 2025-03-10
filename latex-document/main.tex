@@ -38,9 +38,11 @@
 \section{Abstract}
 \label{sec:org6419ad8}
 In this report, is the work process and descisions leading to creating a smart home system that prioritises data security and self-custody.
+\newpage
 \section{Forord}
 \label{sec:org4e437e0}
 I forbindelse med projektet og produktudvikling vil vi gerne rette en tak til vores faglærer, Henrik Poulsen.
+\newpage
 \section{Indledning}
 \label{sec:org6d9531c}
 \subsection{Projektstyring}
@@ -149,8 +151,16 @@ I problemanalysen er problemstillingen blevet yderligere konkretiseret bl.a. ved
 \begin{enumerate}
 \item Decentralt IoT-system
 \end{enumerate}
+
 \section{Produktprincip}
 \label{sec:orga77d6f9}
+
+\subsection{Målgruppe}
+Hr. og fru. Danmark
+
+\subsection{Kravspecifikation}
+
+
 \subsection{Konkurrentanalyse}
 \subsubsection{IKEA}
 IKEA leverer IoT-produkter, som f.eks. smarte lamper, stik samt smart-rullegardiner. Fordelen ved IKEAs produkter er, at de er relativt billige sammenlignet med andre produkter på markedet, at de indgår i et veludviklet og etableret smart-økosystem samt at de er lette at installere.
@@ -173,14 +183,60 @@ Xiaomi er et kinesisk firma, der leverer en lang række smart-hjemme-produkter m
 
 \subsubsection{Huawei}
 Huawei er også en kinesisk virksomhed, som udbyder en række smart-produkter. Den amerikanske start har valgt at banlyse salg og import af nye huawei-produkter. Dette gjorde man fordi man frygtede at der var en risiko for såkaldte "bagdøre" (backdoors) i virksomhedens produkter.\footfullcite{huawei}
-
+\newpage
 
 \section{Produktudformning}
 \label{sec:org563ee9e}
-\subsection{Software}
-\label{sec:org6da2577}
+Under idegeneringen blev der talt om at dedigitalisere de smart-hjem produkter som der findes på markedet, derfor har vi tænkt os at designe og udvikle et smart-hjem rulle gardin som du kan kontrollere fra din smartphone, dette fjerner risikoen med at din data bliver lagret og solgt til virksomheder omkring i verden.
+
 \subsection{Hardware}
 \label{sec:orgdbd4fd8}
+\subsubsection{3D-print}
+Vi besluttede os for at det mest praktiske og realistiske materiale til at producere vores prototype i ville være plastik, altså en 3D-printet kasse hvor vi kan have vores elektroniske komponenter. Her besluttede vi os for at printe med PLA-Plastik da dette er et billigt og forholdsvist holdbart materiale. En anden grund til at vi besluttede os for at benytte en 3D-printet kasse er at det er hurtigt at iterere og forbedre dit design, og det er et ikke særligt dyrt materiale, hvilket gør det økonomisk bevidst at benytte dette til prototypen.
+\begin{figure}[htbp]
+    \centering
+    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \caption{Viser en Fusion360 3D-tegning af Kassen}
+    \end{figure}
+Kassen er simpel da fokuset ikke var at skabe noget der var pænt til at starte med, den er derimod meget funktionel da den gør det muligt at komme til alle individuelle komponenter. Der er også et hul i siden af kassen som er tilpasset til en 12v DC motor, dette gør så at motoren kan sidde fast monteret i kassen. De fire huller i toppen af kassen er lavet så et låg kan monteres for at skjule og beskytte elektronikken i kassen.
+
+\begin{figure}[htbp]
+    \centering
+    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \caption{Viser en Fusion360 3D-tegning af Låget}
+    \end{figure}
+
+Den sidste ting som vi har 3D-printet i forbindelse med vores produkt er et montage stykke til motoren. Det er en cirkel hvor motorens aksel passer i midten. Dette gør det muligt for motoren at dreje rundt på vores gardinstang, da det er muligt at benytte samme teknik som vi har brugt til montage stykket på en roterende gardinstang.
+
+\begin{figure}[htbp]
+    \centering
+    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \caption{Viser en Fusion360 3D-tegning af Montage-Stykket}
+    \end{figure}
+
+Den kasse som vi endte ud med opfylder alle de krav som vi stilte, den er nem og billig at producere, og den holder vores elektronik sikkert og samlet. 
+
+\begin{figure}[htbp]
+    \centering
+    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \caption{Her ses den endelige udgave af produktet. }
+    \end{figure}
+
+\subsubsection{Elektronik}
+I elektronik delen var der nogle også krav der skulle opfyldes, elektronikken skal på sigt kunnes optimeres med special-designede PCB'er. Elektronikken skal også gøre det muligt at bruge WIFI funktionen som vores projekt bygger på.
+
+\begin{figure}[htbp]
+    \centering
+    \fbox{\includegraphics[width=.75\linewidth]{assets/Ikea-smart-home.png}}
+    \caption{Her ses EL-digrammet, tegnet i EasyEDA. }
+    \end{figure}
+
+Elektronik delen var forholdsvist ligefrem da vi vidste at vi skulle have en Microcontroller med WIFI indbygget. Her valgte vi at bruge en ESP8266MOD da de er nemme at programmere takket være ArduinoIDE's ESP8266 Bibliotek. Som også kan ses på billedet ovenfor, benytter vi os af et 9 volts batteri selvom at vi bruger en 12 volts DC motor. Dette er for nemmere at kunne styre den hastighed som motoren kører med, og de 9 volt er stadig rigeligt til at trække motoren, og give strøm til vores ESP8266.
+
+
+\subsection{Software}
+Det er essentielt for vores produkt af vores microcontrollers kan fungere over WIFI, til dette har vi benyttet ArduinoIDE's indbyggede ESP8266 bibliotek da dette giver muligheden for at koble din ESP8266 på WIFI, og på den måde kontrollere den fra vores Smartphone.
+
 \section{Produktionsforberedelse}
 \label{sec:orge880538}
 \subsection{Masseproduktion}
