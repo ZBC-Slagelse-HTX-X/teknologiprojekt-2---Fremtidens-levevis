@@ -241,12 +241,20 @@ I Idegenereringsfasen blev dedigitaliseringen af smart-hjem-produkter som der fi
 \label{sec:orgdbd4fd8}
 \subsubsection{3D-print}
 Vi besluttede os for at det mest praktiske og realistiske materiale til at producere vores prototype i ville være plastik, altså en 3D-printet kasse hvor vi kan have vores elektroniske komponenter. Her besluttede vi os for at printe med PLA-Plastik da dette er et billigt og forholdsvist holdbart materiale. En anden grund til at vi besluttede os for at benytte en 3D-printet kasse er at det er hurtigt at iterere og forbedre dit design, og det er et ikke særligt dyrt materiale, hvilket gør det økonomisk bevidst at benytte dette til prototypen.
+
+Kassen er simpel da fokuset ikke var at skabe noget der var pænt til at starte med, den er derimod meget funktionel da den gør det muligt at komme til alle individuelle komponenter. Der er også et hul i siden af kassen som er tilpasset til en 12v DC motor, dette gør så at motoren kan sidde fast monteret i kassen. De fire huller i toppen af kassen er lavet så et låg kan monteres for at skjule og beskytte elektronikken i kassen.
+
+Den sidste ting som vi har 3D-printet i forbindelse med vores produkt er et montage stykke til motoren. Det er en cirkel hvor motorens aksel passer i midten. Dette gør det muligt for motoren at dreje rundt på vores gardinstang, da det er muligt at benytte samme teknik som vi har brugt til montage stykket på en roterende gardinstang.
+
+Den kasse som vi endte ud med opfylder alle de krav som vi stilte, den er nem og billig at producere, og den holder vores elektronik sikkert og samlet. 
+
+Vi har tegnet kassen i det program der hedder Fusion360, dette er branche standarden inden for AutoCAD programmer og det har en masse funktioner osm gør det nemt at designe selv advancerede 3D-Tegninger. Til at printe disse tegninger har vi brugt en Bambulab A1 3D-printer, Og til at Slice vores print, altså gøre dem klar til at blive printet, har vi brugt Bambulabs software, Bambu Studio. Vi besluttede os for at printe vores produkt med 25 procent infill, dette betyder at 25 procent af kassen er plastik mens resten er tomrum, dette er også en essentiel del da dette yderligere sparer på det allerede billige plastik, men det nedsætter også printiden. vi startede med et lille print med 25 procent infill for at teste styrken på printet, det viste sig at printet var rigeligt stærkt og kan sagtens holde vægten af elektronikken når den evt. skulle monteres på et gardin. 
+
 \begin{figure}[htbp]
     \centering
     \fbox{\includegraphics[width=.75\linewidth]{assets/Kasse.png}}
     \caption{Viser en Fusion360 3D-tegning af Kassen}
     \end{figure}
-Kassen er simpel da fokuset ikke var at skabe noget der var pænt til at starte med, den er derimod meget funktionel da den gør det muligt at komme til alle individuelle komponenter. Der er også et hul i siden af kassen som er tilpasset til en 12v DC motor, dette gør så at motoren kan sidde fast monteret i kassen. De fire huller i toppen af kassen er lavet så et låg kan monteres for at skjule og beskytte elektronikken i kassen.
 
 \begin{figure}[htbp]
     \centering
@@ -254,24 +262,33 @@ Kassen er simpel da fokuset ikke var at skabe noget der var pænt til at starte 
     \caption{Viser en Fusion360 3D-tegning af Låget}
     \end{figure}
 
-Den sidste ting som vi har 3D-printet i forbindelse med vores produkt er et montage stykke til motoren. Det er en cirkel hvor motorens aksel passer i midten. Dette gør det muligt for motoren at dreje rundt på vores gardinstang, da det er muligt at benytte samme teknik som vi har brugt til montage stykket på en roterende gardinstang.
-
 \begin{figure}[htbp]
     \centering
     \fbox{\includegraphics[width=.4\linewidth]{assets/Montage-Stykke.png}}
     \caption{Viser en Fusion360 3D-tegning af Montage-Stykket}
     \end{figure}
 
-Den kasse som vi endte ud med opfylder alle de krav som vi stilte, den er nem og billig at producere, og den holder vores elektronik sikkert og samlet. 
-
 \begin{figure}[htbp]
     \centering
     \fbox{\includegraphics[height=.55\linewidth]{assets/Kasse-frdig.png}}
     \caption{Her ses den endelige udgave af produktet. }
     \end{figure}
+    
 
 \subsubsection{Elektronik}
 I elektronik delen var der nogle også krav der skulle opfyldes, elektronikken skal på sigt kunnes optimeres med special-designede PCB'er. Elektronikken skal også gøre det muligt at bruge WIFI funktionen som vores projekt bygger på.
+
+Elektronik delen var forholdsvist ligefrem da vi vidste at vi skulle have en Microcontroller med WIFI indbygget. Her valgte vi at bruge en ESP8266MOD da de er nemme at programmere takket være ArduinoIDE's ESP8266 Bibliotek.
+
+For at rulle vores fiktive gardin op og ned skal der selvfølgelig bruges en motor, her gik vi med den 12 volts DC motor, dette gjorde vii fordi at den kan give os den nødvendige trækkraft der skal til for at rulle et gardin op, samtidig med at den ikke fylder særligt meget. En anden stor fordel med den motor vi valgte er at den ikke nødvendigvis behøver 12 volt for at dreje rundt. Dette betyder at vi i teorien kan lave en mindre kasse da vi har undersøgt, og konkluderet at selv med 9 volt trækker motoren fint. 
+
+For at give strøm til vores diverse Elektroniske komponenter besluttede vi os for at benytte batterier, mere præcist AA batterier, her forbinder vi 6 batterier ved hjælp af en batteripakke for at komme op på de 9 volt som vores motor skal have. Det har mere end en fordel at benytte sig af AA batterier da det gør det nemt at skifte batterierne i din gardin opruller når den løber tør for strøm, og det er også en ting som de fleste hjem har liggende da de ofte bliver brugt i andre produkter.
+
+Men selvom at vores 12 volts motor sagtens kan køre på 9 volt, kan vores ESP ikke, den har brug for et sted mellem 3,5 og 5 volt for at fungere korrekt, for lidt strøm og den tænder ikke, og for meget risikerer man at beskadige eller ødelægge den. Derfor var vi nødsaget til at benytte os af et Relæ, til at omforme vores strøm fra 9 volt til 5 volt, som vores ESP så kan bruge.
+
+Endnu en grund til at vi har brug for et Relæ er til at kunne kontrollere hvilken vej vores motor kører, da det er en DC motor skal vi bytte om på positiv og negativ spænding for at få vores motor til at køre den modsatte vej, heldigvis kan det Relæ som vi har valgt at benytte gøre dette for os, vi kan kontrollere dette ved hjælp af to pins på Relæet, som vi kan give enten en høj eller en lav spænding, hvilket skifter den retning som motoren roterer i.
+
+For at samle vores elektroniske komponenter har vi været nød til at lodde stik på en masse ledninger, dette har været af en af to grunde. Enten har det komponent som vi har skulle benytte os af ikke haft de rigtige stik på dets ledninger, eller også har der slet ikke været nogen stik på. Her har vi i EL-værkstedet så loddet de rigtige stik på. Det var også nødvendigt for os at lodde ledninger på vores motor da vi ellers ikke havde haft nogen måde til at sende strøm igennem den.
 
 \begin{figure}[htbp]
     \centering
@@ -279,17 +296,20 @@ I elektronik delen var der nogle også krav der skulle opfyldes, elektronikken s
     \caption{Her ses EL-digrammet, tegnet i EasyEDA. }
     \end{figure}
 
-Elektronik delen var forholdsvist ligefrem da vi vidste at vi skulle have en Microcontroller med WIFI indbygget. Her valgte vi at bruge en ESP8266MOD da de er nemme at programmere takket være ArduinoIDE's ESP8266 Bibliotek. Som også kan ses på billedet ovenfor, benytter vi os af et 9 volts batteri selvom at vi bruger en 12 volts DC motor. Dette er for nemmere at kunne styre den hastighed som motoren kører med, og de 9 volt er stadig rigeligt til at trække motoren, og give strøm til vores ESP8266.
-
-
 \subsection{Software}
-Det er essentielt for vores produkt af vores microcontrollers kan fungere over WIFI, til dette har vi benyttet ArduinoIDE's indbyggede ESP8266 bibliotek da dette giver muligheden for at koble din ESP8266 på WIFI, og på den måde kontrollere den fra vores Smartphone.
+Det er essentielt for vores produkt af vores microcontrollers kan fungere over WIFI, til dette har vi benyttet ArduinoIDE's indbyggede ESP8266 bibliotek da dette giver muligheden for at koble din ESP8266 på WIFI, og på den måde kontrollere den fra vores Smartphone. 
+
+Dette har vi gjort ved at opsætte en webserver hostet på vores ESP og forbinde ESPen til vores netværk, herfra kan vi så tilgå den lokale hjemmeside, og sende HTTP requests til den, som f.eks. at tænde for motoren. Dette kan så kontrolles ved at trykke på enten op eller ned knappen som er programmet til at blive vist på hjemmesiden.
 
 \section{Produktionsforberedelse}
 \label{sec:orge880538}
+Til det færdige produkt har vi tænkt os at benytte lignende materialer som dem der blev brugt i protoypen, dog i en mindre og mere effektiv skala. vi har tænkt os at designe og få produceret printplader der indeholder de specifikke komponenter som vi udnytter fra vores relæ og vores ESP. Dette vil sænke både pris og størrelse, og vile også simplificerede og specificere vores produkt mod dens egentlige opgave. 
+
 
 \subsection{Masseproduktion}
 \label{sec:orge66eada}
+Hvis vi skulle masseproducere vores produkt ville det selvfølgelig kræve at vi selv producerede de print plader som vi skal benytte, det skulle også være muligt for os at producere kasserne hurtigt og effektivt, her kunne en produktionsmetode som injection molding benyttes, her skyder man flydende plastik ind i en form af den kasse man vil producere, det er sådan mange plastik produkter, som f.eks. diverse kuglepinde eller vandflasker bliver produceret.
+
 \section{{\bfseries\sffamily TODO} Evaluering}
 \label{sec:org4ddb451}
 \subsection{Hardwarepåvirkning}
@@ -317,4 +337,3 @@ Projektets kulmination kunne have været mere elaborat havde tiden hertil været
 \newpage
 \printbibliography
 \end{document}
-2
