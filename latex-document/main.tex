@@ -37,12 +37,9 @@
 \newpage
 \section{Abstract}
 \label{sec:org6419ad8}
-In this report, is the work process and descisions leading to creating a smart home system that prioritises data security and self-custody.
+In this report, is the work process and descisions leading to creating a smart home system that prioritises data security and self-custody. The report encompases the problem identification, problem analysis, product principles, product realisation and product presentation. The main goal of the product is to create af proof-of-concept smart-home-device that focusses on personal and national security.
 \newpage
-\section{Forord}
-\label{sec:org4e437e0}
-I forbindelse med projektet og produktudvikling vil vi gerne rette en tak til vores faglærer, Henrik Poulsen.
-\newpage
+
 \section{Indledning}
 \label{sec:org6d9531c}
 \subsection{Projektstyring}
@@ -54,7 +51,7 @@ Heri projektet arbejdes der med casen, der omhandler 'bolig'.
 \label{sec:org730faaa}
 \begin{itemize}
 \item Startdato: 9. december 2024
-\item Slutdato: 7. marts 2025
+\item Slutdato: 11. marts 2025
 \end{itemize}
 \begin{enumerate}
 \item Gantt-diagram
@@ -65,11 +62,11 @@ Heri projektet arbejdes der med casen, der omhandler 'bolig'.
 Indenfor temaet er der en række forskellige emner, som kunne være relevante at arbejde med, herunder high-tech-løsninger. Grundet gruppens kompetencer, er denne valgt, hvorfor problemidentifikation er afgrænset hertil.
 \subsubsection{Samfundsmæssige problemstilling}
 \label{sec:orga952bf5}
-I indledningen af problemidentifikationen fremgik det hurtigt, at nogle af de største smart home løsninger kommer fra udenlandske firmaer, herunder Google, Apple, Amazon, men også firmaer der er blevet kritiseret meget, såsom TP-Link. \footfullcite{tplink}
+Mange af de største smart home-løsninger kommer fra udenlandske firmaer, herunder Google, Apple, Amazon, men også firmaer, der er blevet kritiseret meget, såsom TP-Link. \footfullcite{tplink}
 
 Desuden beskrives i sikkerhedsdatablade også, hvordan samtlige IoT-enheder har været anvendt af kinesiske, statssponsorede, hackere, ved at indgå i botnet,\footnote{Et botnet er et netværk af bots (inficerede computermaskiner), som anvendes til synkronangreb mod andre maskiner fx i DDOS-angreb (Distributed Denial of Service).} til at angribe kritiske sektorer i det amerikanske samfund, såsom militær-, udannelseinstitutioner og telekommunikationsløsninger. \footfullcite{securityweek2024chinesespies}
 
-Ifl. Forsvarets Efterretningstjeneste, vurderer Center for Cybersikkerhed, at Ruslands øgede risikovillighed med hensyn til brug af hybride virkemidler mod NATO-lande, herunder Danmark, også omfatter destruktive cyberangreb.\footfullcite{fe-ddis} Indtil videre er der ikke anmeldt angreb via IoT, men det kan ikke udelukkes, at Rusland, som er allieret med Kina, potentielset ville kunne udnytte Kinesiske firmaers adgang til data iagt af deres markedsandel indenfor IoT.
+Ifl. Forsvarets Efterretningstjeneste, vurderer Center for Cybersikkerhed, at Ruslands øgede risikovillighed med hensyn til brug af hybride virkemidler mod NATO-lande, herunder Danmark, også omfatter destruktive cyberangreb.\footfullcite{fe-ddis} Indtil videre er der ikke anmeldt angreb via IoT\footnote{IoT er forkortelsen for Internet Of Things, hvilket er en betegnelse for alle teknologier som benytterr sig af diverse internetprotokoller}, men det kan ikke udelukkes, at Rusland, som er allieret med Kina, potentielset ville kunne udnytte Kinesiske firmaers adgang til data iagt af deres markedsandel indenfor IoT.
 
 Grundet, at det Kommunistiske Kinesiske Parti har regeringsmagten i Kina, medfører dette totalitær lovgivning, der muliggør, at partiet kan indkræve samtlige data fra firmaer, der oppererer til lands \footfullcite{securityweek2024chinesespies}. Potentialet i dette alene, er nok til at refærdiggøre udvikling af et alternativt produkt, såsom det, der heri rapporten beskrives.
 
@@ -90,8 +87,8 @@ Desuden grundet gruppens IT-kompetencer, virker de to resterende løsninger som 
 \subsection{Afgrænsning}
 \label{sec:orgc46d8ef}
 Da en total smarthjemsløsning er meget omfattende, vælges der herfor at fokusere på enkelte dele af en sådan løsning. I dette tilfælde er det endelige produkt et proof-of-concept, hvori en smarthub kan sende signaler og modtage signaler til andre eheder på et lokalt netværk. Desuden skal denne kunne fjernbetjenes igennem en styringsapplikation.
-\subsection{Problemformulering}
-\label{sec:orgef4d52f}
+\newpage
+
 \section{Problemanalyse}
 \label{sec:org3679584}
 
@@ -197,6 +194,7 @@ Her opsættes kravspecifikationen for smarthjem-systemet (specifikt smart-gardin
 
 
 \subsection{Konkurrentanalyse}
+\label{sec:konkurrentanalyse}
 \subsubsection{IKEA}
 IKEA leverer IoT-produkter, som f.eks. smarte lamper, stik samt smart-rullegardiner. Fordelen ved IKEAs produkter er, at de er relativt billige sammenlignet med andre produkter på markedet, at de indgår i et veludviklet og etableret smart-økosystem samt at de er lette at installere.
 IKEAs produkter bliver fremstillet af tvangsarbejdere af bla. hviderussiske fanger. \footfullcite{IKEA} grudnet geopolitiske omstændigheder kan det være problematisk at produkterne bliver fremstillet i Hviderusland.\Ref{sec:orga952bf5}
@@ -229,7 +227,9 @@ Huawei er også en kinesisk virksomhed, som blandt andet udbyder en række smart
 \subsubsection{Software}
 Softwaren skal udvikles efter FOSS-princippet, hvilket betyder at softwaren skal være frit tilgængelig for alle, kan viderudvikles og distribueres frit. Dette er med til at understøtte princippet om decentralisering og gennemsigtighed, som virksomheden bygger på. Det skaber også en større sikkerhed for brugeren, da tech-nørder kan gennemse kildekoden og tilføje forbedringer til softwaren samt råbe vagt i gevær såfremt der er tale om en sikkerhedsrisiko. Desuden vil en softwareudvikler også være tilknyttet projektet, fuld- eller deltids, afhængigt af arbejdsbyrden. Koden skal synkroniseres med GitHub. Git skal anvendes til udviklig- og versionshåndtering.
 
-
+\subsubsection{Finansiering}
+\label{sec:finansiering}
+For at produktet bliver konkurrencedygtigt, er det nødvendigt, at prisen herpå sænkes (se konkurrenceanalyse \ref{sec:konkurrentanalyse}). Det kunne her tænkes, at staten ville være interesseret i at medfinansiere projektet, herunder subsidierer produktet delvist, da dette vil kunne give større markedsandel til et indlandsfirma, som er troværdigt og hvis sikkerhedsrisci er færre og mindre; hvilket kan være vigtigt for den danske sikkerhedspolitiske situation.
 \newpage
 
 \section{Produktudformning}
@@ -287,14 +287,11 @@ Det er essentielt for vores produkt af vores microcontrollers kan fungere over W
 
 \section{Produktionsforberedelse}
 \label{sec:orge880538}
+
 \subsection{Masseproduktion}
 \label{sec:orge66eada}
-\section{{\bfseries\sffamily TODO} Realisering}
-\label{sec:orgd4c9e64}
 \section{{\bfseries\sffamily TODO} Evaluering}
 \label{sec:org4ddb451}
-\section{{\bfseries\sffamily TODO} Miljøvurdering}
-\label{sec:org9bb106c}
 \subsection{Hardwarepåvirkning}
 \label{sec:org9e89a3f}
 \subsection{Softwarepåvirkning (serverpåvirkning)}
@@ -313,7 +310,11 @@ Logistik ifbm. tidlig on-demand produktion kan medregnes i distribuantens CO2-re
 \newpage
 \section{Konklusion}
 \label{sec:org7454aed}
+Projektet er kulmineret i et proof-of-concept, som viser, at det er muligt at lave et smat-hjem-system, som er decentraliseret og kan være sikkert (såfremt der ikke var en evt. bagdør i ESP-32'en). Selve produktet er en anelse defekt, idet der ikke var taget højde for printersporene på de 3D-printede knobber, der udgør lukkemekanismen på kasen, som indeholder maskineindmaden.
+
+Projektets kulmination kunne have været mere elaborat havde tiden hertil været bedre spenderet og projektet bedre koordineret. Desuden er projektet undervejs blevet udsat for en række forsinkelser, herunder sygdom, hvorfor nogle tråde undervejs har skulle gensamles. Dette er uundgåeligt og har således også givet en lærestreg i vigtigheden af at have en god plan, med færdige mål og opgaver, personspecifikt og på forhånd.
 
 \newpage
 \printbibliography
 \end{document}
+2
